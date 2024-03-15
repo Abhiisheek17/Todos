@@ -1,0 +1,194 @@
+/* App.css */
+
+/* General styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 36px;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Input container styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.input-container > input {
+  width: 300px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container > input:focus {
+  border-color: #666666;
+  outline: none;
+}
+
+.input-container > button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.input-container > button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Todo list styles */
+.todo-list {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Todo {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.5s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.Todo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Action {
+  display: flex;
+  align-items: center;
+}
+
+.Action > button {
+  background-color: #dc3545;
+  color: #ffffff;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-left: 10px;
+}
+
+.Action > button:hover {
+  background-color: #c82333;
+}
+
+.completed {
+  opacity: 0;
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+.delete-all-btn {
+  margin-top: 20px;
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-all-btn:hover {
+  background-color: #c82333;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .input-container > input {
+    width: 100%; /* Make input field full width */
+  }
+
+  .input-container > button {
+    width: 100px; /* Adjust button width */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
